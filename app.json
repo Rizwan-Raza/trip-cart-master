@@ -1,0 +1,17 @@
+{
+  "name": "rn_oreo",
+  "displayName": "rn_oreo",
+  "expo": {
+    "name": "Ads Showcase",
+    "android": {
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-6871330764548204~2183846724"
+      }
+    },
+    "ios": {
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-6871330764548204~4048620400"
+      }
+    }
+  }
+}
