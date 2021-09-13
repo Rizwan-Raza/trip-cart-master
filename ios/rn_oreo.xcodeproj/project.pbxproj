@@ -75,7 +75,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* rn_oreoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rn_oreoTests.m; sourceTree = "<group>"; };
 		0649A5B9F79A87C17CA3EEFE /* Pods-rn_oreo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_oreo.debug.xcconfig"; path = "Target Support Files/Pods-rn_oreo/Pods-rn_oreo.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Oreo Fashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Oreo Fashion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Trip Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trip Cart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = rn_oreo/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = rn_oreo/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = rn_oreo/Images.xcassets; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		BF12B013C4924DEAADD432ED /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		E0968CE58FD6131FC6755979 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		E239CFE824E67083006C0AA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E2634D84248F188000AECBEF /* Oreo Fashion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Oreo Fashion.entitlements"; path = "rn_oreo/Oreo Fashion.entitlements"; sourceTree = "<group>"; };
+		E2634D84248F188000AECBEF /* Trip Cart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Trip Cart.entitlements"; path = "rn_oreo/Trip Cart.entitlements"; sourceTree = "<group>"; };
 		E2634D89248F19C800AECBEF /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2634D8B248F19C800AECBEF /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		E2634D8C248F19C800AECBEF /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			children = (
 				E239CFE824E67083006C0AA3 /* GoogleService-Info.plist */,
 				E2634DAA248F1DC800AECBEF /* splash.png */,
-				E2634D84248F188000AECBEF /* Oreo Fashion.entitlements */,
+				E2634D84248F188000AECBEF /* Trip Cart.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -279,7 +279,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Oreo Fashion.app */,
+				13B07F961A680F5B00A75B9A /* Trip Cart.app */,
 				00E356EE1AD99517003FC87E /* rn_oreoTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* rn_oreo-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* rn_oreo-tvOSTests.xctest */,
@@ -344,7 +344,7 @@
 			);
 			name = rn_oreo;
 			productName = rn_oreo;
-			productReference = 13B07F961A680F5B00A75B9A /* Oreo Fashion.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Trip Cart.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* rn_oreo-tvOS */ = {
@@ -918,7 +918,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Oreo Fashion.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Trip Cart.entitlements";
 				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = F3PBLAQ75H;
 				ENABLE_BITCODE = NO;
@@ -936,7 +936,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = oreo.rnlab.io;
-				PRODUCT_NAME = "Oreo Fashion";
+				PRODUCT_NAME = "Trip Cart";
 				SWIFT_OBJC_BRIDGING_HEADER = "rn_oreo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -950,7 +950,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Oreo Fashion.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Trip Cart.entitlements";
 				CURRENT_PROJECT_VERSION = 102;
 				DEVELOPMENT_TEAM = F3PBLAQ75H;
 				INFOPLIST_FILE = rn_oreo/Info.plist;
@@ -963,7 +963,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = oreo.rnlab.io;
-				PRODUCT_NAME = "Oreo Fashion";
+				PRODUCT_NAME = "Trip Cart";
 				SWIFT_OBJC_BRIDGING_HEADER = "rn_oreo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
