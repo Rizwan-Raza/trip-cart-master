@@ -31,7 +31,7 @@ import Style4 from './category/Style4';
 class CategoryScreen extends Component {
   constructor(props, context) {
     super(props, context);
-    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/9180014818";
+    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/5152908389" : "ca-app-pub-6871330764548204/9180014818";
   }
   componentDidMount() {
     const { dispatch } = this.props;

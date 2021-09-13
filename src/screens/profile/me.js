@@ -26,7 +26,7 @@ import SettingMe from './containers/SettingMe';
 class MeScreen extends Component {
   constructor(props, context) {
     super(props, context);
-    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/3041981872";
+    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/5149038959" : "ca-app-pub-6871330764548204/3041981872";
   }
 
   icon = name => {
