@@ -79,7 +79,7 @@ class ProductList extends Component {
       include: include,
     };
 
-    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/2183846724";
+    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-3940256099942544/2934735716" : "ca-app-pub-6871330764548204/2183846724";
   }
 
   //

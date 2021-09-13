@@ -112,11 +112,11 @@ class MeScreen extends Component {
                 : configs.getIn(['copyright', language])}
             </Text>
             <View style={styles.ads}>
-              <AdMobBanner
+              {/* <AdMobBanner
                 bannerSize="fullBanner"
                 adUnitID={this.bannerAdId}
                 servePersonalizedAds
-              />
+              /> */}
             </View>
           </Container>
         </ScrollView>

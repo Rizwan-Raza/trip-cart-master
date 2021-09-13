@@ -74,11 +74,11 @@ class CategoryScreen extends Component {
           <Style1 goProducts={this.goProducts} />
         )}
         <View style={styles.ads}>
-          <AdMobBanner
+          {/* <AdMobBanner
             bannerSize="fullBanner"
             adUnitID={this.bannerAdId}
             servePersonalizedAds
-          />
+          /> */}
         </View>
       </ThemedView>
     );
