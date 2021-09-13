@@ -415,7 +415,6 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = F3PBLAQ75H;
 						LastSwiftMigration = 1200;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -920,7 +919,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Trip Cart.entitlements";
 				CURRENT_PROJECT_VERSION = 102;
-				DEVELOPMENT_TEAM = F3PBLAQ75H;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -952,7 +951,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Trip Cart.entitlements";
 				CURRENT_PROJECT_VERSION = 102;
-				DEVELOPMENT_TEAM = F3PBLAQ75H;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = rn_oreo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
