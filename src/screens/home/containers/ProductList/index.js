@@ -256,7 +256,6 @@ class ProductList extends Component {
         <AdMobBanner style={styles.ads}
           bannerSize="fullBanner"
           adUnitID={this.bannerAdId}
-          // adUnitID={this.bannerAdId}
           servePersonalizedAds
         />
       </>

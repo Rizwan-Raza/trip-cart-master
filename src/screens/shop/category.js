@@ -73,7 +73,7 @@ class CategoryScreen extends Component {
         ) : (
           <Style1 goProducts={this.goProducts} />
         )}
-        <AdMobBanner style={styles.ads}
+        <AdMobBanner
           bannerSize="fullBanner"
           adUnitID={this.bannerAdId}
           servePersonalizedAds
@@ -90,9 +90,6 @@ const styles = StyleSheet.create({
   viewSearch: {
     padding: padding.large,
   },
-  ads: {
-    marginTop: 16,
-  }
 });
 
 const mapStateToProps = state => {
