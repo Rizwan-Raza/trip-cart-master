@@ -31,7 +31,7 @@ import Style4 from './category/Style4';
 class CategoryScreen extends Component {
   constructor(props, context) {
     super(props, context);
-    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/2183846724";
+    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/9180014818";
   }
   componentDidMount() {
     const { dispatch } = this.props;
@@ -73,13 +73,11 @@ class CategoryScreen extends Component {
         ) : (
           <Style1 goProducts={this.goProducts} />
         )}
-        <View style={styles.ads}>
-          {/* <AdMobBanner
-            bannerSize="fullBanner"
-            adUnitID={this.bannerAdId}
-            servePersonalizedAds
-          /> */}
-        </View>
+        <AdMobBanner style={styles.ads}
+          bannerSize="fullBanner"
+          adUnitID={this.bannerAdId}
+          servePersonalizedAds
+        />
       </ThemedView>
     );
   }
@@ -93,7 +91,7 @@ const styles = StyleSheet.create({
     padding: padding.large,
   },
   ads: {
-    margin: 16,
+    marginTop: 16,
   }
 });
 

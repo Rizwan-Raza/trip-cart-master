@@ -26,7 +26,7 @@ import SettingMe from './containers/SettingMe';
 class MeScreen extends Component {
   constructor(props, context) {
     super(props, context);
-    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/2183846724";
+    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/3041981872";
   }
 
   icon = name => {
@@ -111,14 +111,12 @@ class MeScreen extends Component {
                 ? configs.get('copyright')
                 : configs.getIn(['copyright', language])}
             </Text>
-            <View style={styles.ads}>
-              {/* <AdMobBanner
-                bannerSize="fullBanner"
-                adUnitID={this.bannerAdId}
-                servePersonalizedAds
-              /> */}
-            </View>
           </Container>
+            <AdMobBanner style={styles.ads}
+              bannerSize="fullBanner"
+              adUnitID={this.bannerAdId}
+              servePersonalizedAds
+            />
         </ScrollView>
       </ThemedView>
     );
@@ -144,7 +142,7 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
   ads: {
-    margin: 16,
+    marginTop: 16,
   }
 });
 

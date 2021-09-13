@@ -8,7 +8,7 @@ import split from 'lodash/split';
 import take from 'lodash/take';
 import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
-import { Platform, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import { mainStack } from 'src/config/navigator';
@@ -79,7 +79,7 @@ class ProductList extends Component {
       include: include,
     };
 
-    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-3940256099942544/2934735716" : "ca-app-pub-6871330764548204/2183846724";
+    this.bannerAdId = Platform.OS == "ios" ? "ca-app-pub-6871330764548204/4405867144" : "ca-app-pub-6871330764548204/8256162994";
   }
 
   //
@@ -253,13 +253,12 @@ class ProductList extends Component {
           limit={per_page}
           loading={loading}
         />
-        <View style={styles.ads}>
-          <AdMobBanner
-            bannerSize="fullBanner"
-            adUnitID={this.bannerAdId}
-            servePersonalizedAds
-          />
-        </View>
+        <AdMobBanner style={styles.ads}
+          bannerSize="fullBanner"
+          adUnitID={this.bannerAdId}
+          // adUnitID={this.bannerAdId}
+          servePersonalizedAds
+        />
       </>
     );
   }
@@ -270,7 +269,7 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   ads: {
-    margin: 16,
+    marginTop: 16
   }
 });
 
