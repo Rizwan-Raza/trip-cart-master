@@ -934,7 +934,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = oreo.rnlab.io;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart;
 				PRODUCT_NAME = "Trip Cart";
 				SWIFT_OBJC_BRIDGING_HEADER = "rn_oreo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -961,7 +961,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = oreo.rnlab.io;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart;
 				PRODUCT_NAME = "Trip Cart";
 				SWIFT_OBJC_BRIDGING_HEADER = "rn_oreo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1223,7 +1223,7 @@
 				MARKETING_VERSION = 2.4.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = oreo.rnlab.io.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1251,7 +1251,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 2.4.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = oreo.rnlab.io.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

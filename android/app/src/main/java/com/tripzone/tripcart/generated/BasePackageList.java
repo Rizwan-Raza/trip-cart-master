@@ -1,4 +1,4 @@
-package com.rn_oreo.generated;
+package com.tripzone.tripcart.generated;
 
 import java.util.Arrays;
 import java.util.List;

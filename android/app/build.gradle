@@ -142,11 +142,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.rn_oreo"
+        applicationId "com.tripzone.tripcart"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1609314329
-        versionName "2.4.0"
+        versionCode 1
+        versionName "1.0.0"
         multiDexEnabled true
     }
     splits {

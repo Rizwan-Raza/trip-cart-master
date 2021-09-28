@@ -135,7 +135,7 @@ class DemoConfig extends React.Component {
                 style={styles.textNote}
                 onPress={() =>
                   Linking.openURL(
-                    'https://doc-oreo.rnlab.io/docs/v1/web-config',
+                    'https://doc-com.tripzone.tripcart/docs/v1/web-config',
                   )
                 }>
                 How to get Consumer key and Consumer secret

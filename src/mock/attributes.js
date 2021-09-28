@@ -115,12 +115,12 @@ export default [
     _links: {
       self: [
         {
-          href: 'https://oreo.rnlab.io/wp-json/wc/v3/products/attributes/3',
+          href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/attributes/3',
         },
       ],
       collection: [
         {
-          href: 'https://oreo.rnlab.io/wp-json/wc/v3/products/attributes',
+          href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/attributes',
         },
       ],
     },
@@ -202,12 +202,12 @@ export default [
     _links: {
       self: [
         {
-          href: 'https://oreo.rnlab.io/wp-json/wc/v3/products/attributes/5',
+          href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/attributes/5',
         },
       ],
       collection: [
         {
-          href: 'https://oreo.rnlab.io/wp-json/wc/v3/products/attributes',
+          href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/attributes',
         },
       ],
     },
@@ -296,12 +296,12 @@ export default [
     _links: {
       self: [
         {
-          href: 'https://oreo.rnlab.io/wp-json/wc/v3/products/attributes/4',
+          href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/attributes/4',
         },
       ],
       collection: [
         {
-          href: 'https://oreo.rnlab.io/wp-json/wc/v3/products/attributes',
+          href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/attributes',
         },
       ],
     },
