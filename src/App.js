@@ -31,6 +31,7 @@ import {getDemoSelector} from './modules/common/selectors';
 import {tokenSelector} from './modules/auth/selectors';
 import demoConfig from './utils/demo';
 import globalConfig from './utils/global';
+import { requestTrackingPermission } from 'react-native-tracking-transparency';
 
 const {store, persistor} = configureStore();
 class App extends Component {
@@ -90,6 +91,7 @@ class App extends Component {
   }
 
   render() {
+    await requestTrackingPermission();
     return (
       <NavigationContainer
         ref={navigationRef =>
