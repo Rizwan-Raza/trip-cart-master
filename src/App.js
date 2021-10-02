@@ -34,9 +34,44 @@ import globalConfig from './utils/global';
 import { requestTrackingPermission } from 'react-native-tracking-transparency';
 
 const {store, persistor} = configureStore();
-await requestTrackingPermission();
+// await requestTrackingPermission();
 class App extends Component {
+
+  // async requestTrackingPermissionHelper() {
+  //   // console.log('Requesting TrackingPerm');
+  //   // try {
+  //   //   const status = await requestTrackingPermission();
+  //   //   setTrackingStatus(status);
+  //   //   console.log('Done TrackingPerm');
+  //   // } catch (e) {
+  //   //   Alert.alert('Error', e?.toString?.() ?? e);
+  //   //   console.log('Failed TrackingPerm');
+  //   // }
+  //   const [trackingStatus, setTrackingStatus] = React.useState<
+  //   TrackingStatus | '(loading)'
+  // >('(loading)');
+
+  // React.useEffect(() => {
+  //   getTrackingStatus()
+  //     .then((status) => {
+  //       setTrackingStatus(status);
+  //     })
+  //     .catch((e) => Alert.alert('Error', e?.toString?.() ?? e));
+  // }, []);
+  // const request = React.useCallback(async () => {
+  //   try {
+  //     const status = await requestTrackingPermission();
+  //     setTrackingStatus(status);
+  //   } catch (e) {
+  //     Alert.alert('Error', e?.toString?.() ?? e);
+  //   }
+  // }, []);
+  // }
   componentDidMount() {
+    console.log('Requesting TrackingPerm');
+    requestTrackingPermission();
+    console.log('Done TrackingPerm');
+
     OneSignal.setAppId(APP_ID);
 
     // O N E S I G N A L   S E T U P
