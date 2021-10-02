@@ -34,6 +34,7 @@ import globalConfig from './utils/global';
 import { requestTrackingPermission } from 'react-native-tracking-transparency';
 
 const {store, persistor} = configureStore();
+await requestTrackingPermission();
 class App extends Component {
   componentDidMount() {
     OneSignal.setAppId(APP_ID);
@@ -91,7 +92,6 @@ class App extends Component {
   }
 
   render() {
-    await requestTrackingPermission();
     return (
       <NavigationContainer
         ref={navigationRef =>
