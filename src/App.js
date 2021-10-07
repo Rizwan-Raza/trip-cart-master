@@ -11,27 +11,28 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import React, { Component } from 'react';
+import { Time } from 'react-native-gifted-chat';
 import OneSignal from 'react-native-onesignal';
-import {NavigationContainer} from '@react-navigation/native';
-
-import {APP_ID} from './config/onesignal';
-import './config-i18n';
-
-import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/integration/react';
-
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import AppRouter from './AppRouter';
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { requestTrackingPermission } from 'react-native-tracking-transparency';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import NavigationService from 'src/utils/navigation';
-
+import AppRouter from './AppRouter';
+import './config-i18n';
 import configureStore from './config-store';
-import {getDemoSelector} from './modules/common/selectors';
-import {tokenSelector} from './modules/auth/selectors';
+import { APP_ID } from './config/onesignal';
+import { tokenSelector } from './modules/auth/selectors';
+import { getDemoSelector } from './modules/common/selectors';
 import demoConfig from './utils/demo';
 import globalConfig from './utils/global';
-import { requestTrackingPermission } from 'react-native-tracking-transparency';
+
+
+
+
+
 
 const {store, persistor} = configureStore();
 // await requestTrackingPermission();
@@ -68,9 +69,7 @@ class App extends Component {
   // }, []);
   // }
   componentDidMount() {
-    console.log('Requesting TrackingPerm');
-    requestTrackingPermission();
-    console.log('Done TrackingPerm');
+   
 
     OneSignal.setAppId(APP_ID);
 
@@ -115,11 +114,18 @@ class App extends Component {
       console.log('OneSignal: permission changed:', event);
     });
 
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      console.log('Requesting TrackingPerm');
+      requestTrackingPermission();
+      console.log('Done TrackingPerm');
+  }
+    
     store.subscribe(() => {
       const state = store.getState();
       demoConfig.setData(getDemoSelector(state).toJS());
       globalConfig.setToken(tokenSelector(state));
     });
+    
   }
 
   componentWillUnmount() {
