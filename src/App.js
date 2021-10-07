@@ -114,12 +114,12 @@ class App extends Component {
       console.log('OneSignal: permission changed:', event);
     });
 
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+    setTimeout(() => {   
       console.log('Requesting TrackingPerm');
       requestTrackingPermission();
       console.log('Done TrackingPerm');
-  }
-    
+    }, 1000);
+        
     store.subscribe(() => {
       const state = store.getState();
       demoConfig.setData(getDemoSelector(state).toJS());
