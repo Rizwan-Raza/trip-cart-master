@@ -1,5 +1,5 @@
-package com.tripzone.tripcart;
-import com.tripzone.tripcart.generated.BasePackageList;
+package com.travelzone.tripcart;
+import com.travelzone.tripcart.generated.BasePackageList;
 
 import android.app.Application;
 import android.content.Context;
@@ -78,7 +78,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.tripzone.tripcart.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.travelzone.tripcart.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

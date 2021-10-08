@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1A9C57192702479500979E02 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E2634D89248F19C800AECBEF /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AE2B5E65FB017ABFC3DDE20 /* libPods-rn_oreo-rn_oreoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDE3C77E4770D2E8A10B4F6 /* libPods-rn_oreo-rn_oreoTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -19,7 +20,6 @@
 		B10277C4151CF9DA3F78656A /* libPods-rn_oreo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E70D379BFE9DAACC3A929A44 /* libPods-rn_oreo.a */; };
 		E239CFE924E67083006C0AA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E239CFE824E67083006C0AA3 /* GoogleService-Info.plist */; };
 		E2634D8D248F19C800AECBEF /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = E2634D8C248F19C800AECBEF /* NotificationService.m */; };
-		E2634D91248F19C800AECBEF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E2634D89248F19C800AECBEF /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E2634DA6248F1CA400AECBEF /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C833DDEE59A4E31822B647A /* Poppins-Light.ttf */; };
 		E2634DA7248F1CA400AECBEF /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 747ECB254C8A45CAB24C84EA /* Poppins-Medium.ttf */; };
 		E2634DA8248F1CA400AECBEF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 342F26E965504A06A89F7180 /* Poppins-Regular.ttf */; };
@@ -40,6 +40,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = rn_oreo;
 		};
+		1A9C571A2702479500979E02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2634D88248F19C800AECBEF;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -47,23 +54,16 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "rn_oreo-tvOS";
 		};
-		E2634D8F248F19C800AECBEF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2634D88248F19C800AECBEF;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E2634D92248F19C800AECBEF /* Embed App Extensions */ = {
+		1A9C571C2702479500979E02 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E2634D91248F19C800AECBEF /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+				1A9C57192702479500979E02 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +82,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = rn_oreo/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rn_oreo/main.m; sourceTree = "<group>"; };
 		160459C9916A4F7B97C50DFF /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		1AD8E6A92704C1CE00F277A8 /* OneSignalNotificationServiceExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OneSignalNotificationServiceExtension copy-Info.plist"; path = "/Users/prashantthakur/Desktop/ReactNativeApp/trip-cart-master/ios/OneSignalNotificationServiceExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		2D02E47B1E0B4A5D006451C7 /* rn_oreo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rn_oreo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* rn_oreo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rn_oreo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA15950234442CD807F8429 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -270,6 +271,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				786856B6AE1B4D50B75CBC84 /* Resources */,
 				5D39D64507C9E2A4D1CCAD45 /* Pods */,
+				1AD8E6A92704C1CE00F277A8 /* OneSignalNotificationServiceExtension copy-Info.plist */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -334,13 +336,13 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C5BF001CDFC7199D0E761BB1 /* [CP] Copy Pods Resources */,
 				DEAD479C51261B0EAE102260 /* [CP-User] [RNFB] Core Configuration */,
-				E2634D92248F19C800AECBEF /* Embed App Extensions */,
 				7944305E4D3665A9CC67DED6 /* [CP] Embed Pods Frameworks */,
+				1A9C571C2702479500979E02 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E2634D90248F19C800AECBEF /* PBXTargetDependency */,
+				1A9C571B2702479500979E02 /* PBXTargetDependency */,
 			);
 			name = rn_oreo;
 			productName = rn_oreo;
@@ -408,17 +410,24 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 4F63GR4NJU;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 4F63GR4NJU;
 						LastSwiftMigration = 1200;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4F63GR4NJU;
 						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 					};
@@ -429,7 +438,7 @@
 					};
 					E2634D88248F19C800AECBEF = {
 						CreatedOnToolsVersion = 11.5;
-						DevelopmentTeam = F3PBLAQ75H;
+						DevelopmentTeam = 4F63GR4NJU;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -853,15 +862,15 @@
 			target = 13B07F861A680F5B00A75B9A /* rn_oreo */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		1A9C571B2702479500979E02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2634D88248F19C800AECBEF /* OneSignalNotificationServiceExtension */;
+			targetProxy = 1A9C571A2702479500979E02 /* PBXContainerItemProxy */;
+		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* rn_oreo-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
-		};
-		E2634D90248F19C800AECBEF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E2634D88248F19C800AECBEF /* OneSignalNotificationServiceExtension */;
-			targetProxy = E2634D8F248F19C800AECBEF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -872,6 +881,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -897,6 +907,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				INFOPLIST_FILE = rn_oreoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -918,8 +929,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Trip Cart.entitlements";
-				CURRENT_PROJECT_VERSION = 102;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -928,14 +941,15 @@
 				INFOPLIST_FILE = rn_oreo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.travelzone.tripcart;
 				PRODUCT_NAME = "Trip Cart";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "rn_oreo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -950,19 +964,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "rn_oreo/Trip Cart.entitlements";
-				CURRENT_PROJECT_VERSION = 102;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				INFOPLIST_FILE = rn_oreo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 1.0.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart;
+				PRODUCT_BUNDLE_IDENTIFIER = com.travelzone.tripcart;
 				PRODUCT_NAME = "Trip Cart";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "rn_oreo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -980,6 +998,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "rn_oreo-tvOS/Info.plist";
@@ -1012,6 +1031,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "rn_oreo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1213,17 +1233,17 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 102;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = F3PBLAQ75H;
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 1.0.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.travelzone.tripcart.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1242,16 +1262,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 102;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = F3PBLAQ75H;
+				DEVELOPMENT_TEAM = 4F63GR4NJU;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 1.0.2;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tripzone.tripcart.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.travelzone.tripcart.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

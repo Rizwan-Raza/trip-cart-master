@@ -1,4 +1,4 @@
-package com.tripzone.tripcart;
+package com.travelzone.tripcart;
 
 import android.os.Bundle;
 

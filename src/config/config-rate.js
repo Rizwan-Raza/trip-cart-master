@@ -1,6 +1,6 @@
 export default {
   AppleAppID: '1475075333',
-  GooglePackageName: 'com.tripzone.tripcart',
+  GooglePackageName: 'com.travelzone.tripcart',
   preferInApp: true,
   openAppStoreIfInAppFails: true,
 };

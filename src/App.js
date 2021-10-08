@@ -11,30 +11,66 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import React, { Component } from 'react';
+import { Time } from 'react-native-gifted-chat';
 import OneSignal from 'react-native-onesignal';
-import {NavigationContainer} from '@react-navigation/native';
-
-import {APP_ID} from './config/onesignal';
-import './config-i18n';
-
-import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/integration/react';
-
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import AppRouter from './AppRouter';
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { requestTrackingPermission } from 'react-native-tracking-transparency';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import NavigationService from 'src/utils/navigation';
-
+import AppRouter from './AppRouter';
+import './config-i18n';
 import configureStore from './config-store';
-import {getDemoSelector} from './modules/common/selectors';
-import {tokenSelector} from './modules/auth/selectors';
+import { APP_ID } from './config/onesignal';
+import { tokenSelector } from './modules/auth/selectors';
+import { getDemoSelector } from './modules/common/selectors';
 import demoConfig from './utils/demo';
 import globalConfig from './utils/global';
 
+
+
+
+
+
 const {store, persistor} = configureStore();
+// await requestTrackingPermission();
 class App extends Component {
+
+  // async requestTrackingPermissionHelper() {
+  //   // console.log('Requesting TrackingPerm');
+  //   // try {
+  //   //   const status = await requestTrackingPermission();
+  //   //   setTrackingStatus(status);
+  //   //   console.log('Done TrackingPerm');
+  //   // } catch (e) {
+  //   //   Alert.alert('Error', e?.toString?.() ?? e);
+  //   //   console.log('Failed TrackingPerm');
+  //   // }
+  //   const [trackingStatus, setTrackingStatus] = React.useState<
+  //   TrackingStatus | '(loading)'
+  // >('(loading)');
+
+  // React.useEffect(() => {
+  //   getTrackingStatus()
+  //     .then((status) => {
+  //       setTrackingStatus(status);
+  //     })
+  //     .catch((e) => Alert.alert('Error', e?.toString?.() ?? e));
+  // }, []);
+  // const request = React.useCallback(async () => {
+  //   try {
+  //     const status = await requestTrackingPermission();
+  //     setTrackingStatus(status);
+  //   } catch (e) {
+  //     Alert.alert('Error', e?.toString?.() ?? e);
+  //   }
+  // }, []);
+  // }
   componentDidMount() {
+   
+
     OneSignal.setAppId(APP_ID);
 
     // O N E S I G N A L   S E T U P
@@ -78,11 +114,18 @@ class App extends Component {
       console.log('OneSignal: permission changed:', event);
     });
 
+    setTimeout(() => {   
+      console.log('Requesting TrackingPerm');
+      requestTrackingPermission();
+      console.log('Done TrackingPerm');
+    }, 1000);
+        
     store.subscribe(() => {
       const state = store.getState();
       demoConfig.setData(getDemoSelector(state).toJS());
       globalConfig.setToken(tokenSelector(state));
     });
+    
   }
 
   componentWillUnmount() {
