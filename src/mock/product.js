@@ -2,7 +2,7 @@ export default {
   id: 69,
   name: 'Denim shirt',
   slug: 'denim-shirt',
-  permalink: 'https://com.travelzone.tripcart/product/denim-shirt/',
+  permalink: 'https://com.tripzone.tripcart/product/denim-shirt/',
   date_created: '2019-06-02T06:58:24',
   date_created_gmt: '2019-06-02T06:58:24',
   date_modified: '2019-07-02T08:37:15',
@@ -244,12 +244,12 @@ export default {
   _links: {
     self: [
       {
-        href: 'https://com.travelzone.tripcart/wp-json/wc/v3/products/69',
+        href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products/69',
       },
     ],
     collection: [
       {
-        href: 'https://com.travelzone.tripcart/wp-json/wc/v3/products',
+        href: 'https://com.tripzone.tripcart/wp-json/wc/v3/products',
       },
     ],
   },
