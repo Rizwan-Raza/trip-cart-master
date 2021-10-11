@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.travelzone.tripcart">
+          package="com.tripzone.tripcart">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 

@@ -1,4 +1,4 @@
-package com.travelzone.tripcart.generated;
+package com.tripzone.tripcart.generated;
 
 import java.util.Arrays;
 import java.util.List;
