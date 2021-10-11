@@ -253,11 +253,11 @@ class ProductList extends Component {
           limit={per_page}
           loading={loading}
         />
-        <AdMobBanner style={styles.ads}
+        {global.attperm === 'authorized' || global.attperm === 'unavailable' && <AdMobBanner style={styles.ads}
           bannerSize="fullBanner"
           adUnitID={this.bannerAdId}
           servePersonalizedAds
-        />
+        />}
       </>
     );
   }

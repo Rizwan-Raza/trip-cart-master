@@ -13,7 +13,6 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import React, { Component } from 'react';
-import { Time } from 'react-native-gifted-chat';
 import OneSignal from 'react-native-onesignal';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { requestTrackingPermission } from 'react-native-tracking-transparency';
@@ -34,7 +33,7 @@ import globalConfig from './utils/global';
 
 
 
-const {store, persistor} = configureStore();
+const { store, persistor } = configureStore();
 // await requestTrackingPermission();
 class App extends Component {
 
@@ -69,7 +68,7 @@ class App extends Component {
   // }, []);
   // }
   componentDidMount() {
-   
+
 
     OneSignal.setAppId(APP_ID);
 
@@ -114,18 +113,18 @@ class App extends Component {
       console.log('OneSignal: permission changed:', event);
     });
 
-    setTimeout(() => {   
+    setTimeout(async () => {
       console.log('Requesting TrackingPerm');
-      requestTrackingPermission();
-      console.log('Done TrackingPerm');
-    }, 1000);
-        
+      global.attperm = await requestTrackingPermission();
+      console.log('Done TrackingPerm' + global.attperm);
+    }, 2000);
+
     store.subscribe(() => {
       const state = store.getState();
       demoConfig.setData(getDemoSelector(state).toJS());
       globalConfig.setToken(tokenSelector(state));
     });
-    
+
   }
 
   componentWillUnmount() {

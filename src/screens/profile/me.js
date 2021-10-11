@@ -112,11 +112,11 @@ class MeScreen extends Component {
                 : configs.getIn(['copyright', language])}
             </Text>
           </Container>
-            <AdMobBanner style={styles.ads}
-              bannerSize="fullBanner"
-              adUnitID={this.bannerAdId}
-              servePersonalizedAds
-            />
+          {global.attperm === 'authorized' || global.attperm === 'unavailable' && <AdMobBanner style={styles.ads}
+          bannerSize="fullBanner"
+          adUnitID={this.bannerAdId}
+          servePersonalizedAds
+        />}
         </ScrollView>
       </ThemedView>
     );

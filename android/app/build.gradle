@@ -142,7 +142,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.tripzone.tripcart"
+        applicationId "com.travelzone.tripcart"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 4
