@@ -112,7 +112,7 @@ class MeScreen extends Component {
                 : configs.getIn(['copyright', language])}
             </Text>
           </Container>
-          {global.attperm === 'authorized' || global.attperm === 'unavailable' && <AdMobBanner style={styles.ads}
+          {(global.attperm === 'authorized' || global.attperm === 'unavailable') && <AdMobBanner style={styles.ads}
           bannerSize="fullBanner"
           adUnitID={this.bannerAdId}
           servePersonalizedAds

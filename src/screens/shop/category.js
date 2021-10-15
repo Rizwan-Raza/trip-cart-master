@@ -73,7 +73,7 @@ class CategoryScreen extends Component {
         ) : (
           <Style1 goProducts={this.goProducts} />
         )}
-        {global.attperm === 'authorized' || global.attperm === 'unavailable' && <AdMobBanner style={styles.ads}
+        {(global.attperm === 'authorized' || global.attperm === 'unavailable') && <AdMobBanner style={styles.ads}
           bannerSize="fullBanner"
           adUnitID={this.bannerAdId}
           servePersonalizedAds

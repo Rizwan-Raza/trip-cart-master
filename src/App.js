@@ -13,6 +13,7 @@
 
 import { NavigationContainer } from '@react-navigation/native';
 import React, { Component } from 'react';
+import { AppState } from "react-native";
 import OneSignal from 'react-native-onesignal';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { requestTrackingPermission } from 'react-native-tracking-transparency';
@@ -37,36 +38,22 @@ const { store, persistor } = configureStore();
 // await requestTrackingPermission();
 class App extends Component {
 
-  // async requestTrackingPermissionHelper() {
-  //   // console.log('Requesting TrackingPerm');
-  //   // try {
-  //   //   const status = await requestTrackingPermission();
-  //   //   setTrackingStatus(status);
-  //   //   console.log('Done TrackingPerm');
-  //   // } catch (e) {
-  //   //   Alert.alert('Error', e?.toString?.() ?? e);
-  //   //   console.log('Failed TrackingPerm');
-  //   // }
-  //   const [trackingStatus, setTrackingStatus] = React.useState<
-  //   TrackingStatus | '(loading)'
-  // >('(loading)');
+  checkPermission = async () => {
+    console.log('Requesting TrackingPerm');
+    global.attperm = await requestTrackingPermission();
+    console.log('Done TrackingPerm' + global.attperm);
+  };
 
-  // React.useEffect(() => {
-  //   getTrackingStatus()
-  //     .then((status) => {
-  //       setTrackingStatus(status);
-  //     })
-  //     .catch((e) => Alert.alert('Error', e?.toString?.() ?? e));
-  // }, []);
-  // const request = React.useCallback(async () => {
-  //   try {
-  //     const status = await requestTrackingPermission();
-  //     setTrackingStatus(status);
-  //   } catch (e) {
-  //     Alert.alert('Error', e?.toString?.() ?? e);
-  //   }
-  // }, []);
-  // }
+  handleAppStateChange = (nextState) => {
+    if (nextState === "active") {
+      if (Platform.OS === "ios") {
+        // Only once app has become active
+        // can we prompt app tracking permission (Apple iOS 15 requirement)
+        this.checkPermission();
+      }
+    }
+  };
+
   componentDidMount() {
 
 
@@ -113,17 +100,14 @@ class App extends Component {
       console.log('OneSignal: permission changed:', event);
     });
 
-    setTimeout(async () => {
-      console.log('Requesting TrackingPerm');
-      global.attperm = await requestTrackingPermission();
-      console.log('Done TrackingPerm' + global.attperm);
-    }, 2000);
 
     store.subscribe(() => {
       const state = store.getState();
       demoConfig.setData(getDemoSelector(state).toJS());
       globalConfig.setToken(tokenSelector(state));
     });
+
+    AppState.addEventListener("change", this.handleAppStateChange);
 
   }
 
